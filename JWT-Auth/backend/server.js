@@ -2,10 +2,12 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors"; 
 import authRoutes from "./routes/authRoutes.js";  
+import { callDb } from "./helpers/db.js";
 dotenv.config();
 
 const app = express();
 const port = 3000;
+callDb()
 
 
 app.use(cors());  
